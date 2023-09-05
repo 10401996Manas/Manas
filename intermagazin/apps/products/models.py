@@ -8,6 +8,8 @@ class Product(models.Model):
     quantity = models.IntegerField(default=0)
     country = models.CharField(max_length=150)
     created_at = models.DateTimeField(auto_created=True)
+    image = models.ImageField(upload_to='product_image')
 
     def __str__(self):
         return self.title
+
